@@ -7,7 +7,7 @@ type Props = {
 export default async function recordAttendance({ params }: Props) {
 
     try {
-        const res = await fetch('http://localhost:3000/api/recordAttendance',
+        const res = await fetch(`${process.env.NEXT_PUBLIC_IP_API}api/register-attendance/`,
             {
                 method: 'POST',
                 body: JSON.stringify(params),
